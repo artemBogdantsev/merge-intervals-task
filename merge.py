@@ -1,6 +1,10 @@
 #!/usr/bin/python
 
-import getopt, sys, intervals
+import getopt
+import sys
+import time
+import intervals
+
 
 def main():
     try:
@@ -30,4 +34,6 @@ def usage():
           "intervals are space separated: [a,c] [b, d]"
 
 if __name__ == "__main__":
+    start_time = time.time()
     main()
+    print("--- %.10f seconds ---" % (time.time() - start_time))
