@@ -15,7 +15,7 @@ class Intervals:
         '''
         Implementation of the merge function based on the scanning line algorithm
 
-        :return:
+        :return: type <list>
         '''
 
         # first we loop through all intervals and pick their start and end borders adding type of this border
@@ -24,7 +24,9 @@ class Intervals:
             self.borders.append([interval[1], self.type_end])
 
         # using python's sort function on the list to sort all borders ascending
-        self.borders.sort()
+        # using lambda to sort by two attributes, e.g. borders are sorted ascending, however border type has
+        # to be sorted descending in a case we have multiple borders, therefor beginnings of intervals always first
+        self.borders.sort(key=lambda x: (x[0], -x[1]))
 
         # second loop through the sorted borders and doing recalculation on interval overlaps
         for border in self.borders:
