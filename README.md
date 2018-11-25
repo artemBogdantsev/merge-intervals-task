@@ -30,3 +30,31 @@ To solve this task I will refer to the scanning line algorithm:
 - Please call the `merge.py` script from the console
 - ``` > python merge.py -i "[interval 1] [interval 2] ... [interval N]"```
 - **Note**: please use whitespaces as separator for the intervals in square brackets
+
+## Results
+1. Initial task performance
+```
+botem@Artems-MBP > ~/IdeaProjects/merge-intervals-task > master > python -m memory_profiler merge.py -i "[2, 19] [25, 30] [14, 23] [4, 8]"                                        
+Intervals: [[2, 19], [25, 30], [14, 23], [4, 8]] <type 'list'>
+Merge result: [[2, 23], [25, 30]] <type 'list'>
+--- 0.0033469200 seconds ---
+Filename: intervals.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    14    9.363 MiB    9.363 MiB       @profile
+    15                                 def merge(self):
+```
+2. Performance by adding more intervals
+```
+botem@Artems-MBP > ~/IdeaProjects/merge-intervals-task > master > python -m memory_profiler merge.py -i "[2, 19] [25, 30] [14, 23] [4, 8] [23, 25] [2,8] [-3, 5] [1,3] [34, 3435]"
+Intervals: [[2, 19], [25, 30], [14, 23], [4, 8], [23, 25], [2, 8], [-3, 5], [1, 3], [34, 3435]] <type 'list'>
+Merge result: [[-3, 30], [34, 3435]] <type 'list'>
+--- 0.0046708584 seconds ---
+Filename: intervals.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    14    9.672 MiB    9.672 MiB       @profile
+    15                                 def merge(self):
+```
