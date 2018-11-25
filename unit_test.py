@@ -23,7 +23,7 @@ class MergeTest(unittest.TestCase):
 
     def test_wrong_result(self):
         '''
-        Unittest to Get the right result
+        Unittest to fail with the wrong result
         '''
 
         myIntervals = [[2, 19], [25, 30], [14, 23], [4, 8], [23, 25]]
