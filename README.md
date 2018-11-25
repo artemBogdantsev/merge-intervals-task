@@ -20,3 +20,13 @@ To solve this task I will refer to the scanning line algorithm:
 5. Start "scanning" from the first element from left to right!
 6. Use counter to have an information of how many intervals exist at the certain border.
 7. If counter resets to 0 at the certain point then it is an end of interval. If counter changes to 1 then new interval begins
+
+## Usage
+### 1. Through unit test
+- Please add your test cases to see that the MERGE function fulfils your requirements
+- ``` > python unit_test.py
+
+### 2. Through CLI
+- Please call the `merge.py` scrip from the console
+- ``` > python merge.py -i "[interval 1] [interval 2] ... [interval N]"
+- **Note**: please use whitespaces as separator for the intervals in square brackets
