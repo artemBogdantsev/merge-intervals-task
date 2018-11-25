@@ -17,6 +17,6 @@ To solve this task I will refer to the scanning line algorithm:
 2. Assign 1 to those borders which are beginning of each interval
 3. Assign -1 to those borders which are end of each interval
 4. Sort an array/list ascending
-5. Start "scanning" from the first element.
+5. Start "scanning" from the first element from left to right!
 6. Use counter to have an information of how many intervals exist at the certain border.
 7. If counter resets to 0 at the certain point then it is an end of interval. If counter changes to 1 then new interval begins
