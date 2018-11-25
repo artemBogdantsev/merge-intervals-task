@@ -24,9 +24,9 @@ To solve this task I will refer to the scanning line algorithm:
 ## Usage
 ### 1. Through unit test
 - Please add your test cases to see that the MERGE function fulfils your requirements
-- ``` > python unit_test.py
+- ``` > python unit_test.py```
 
 ### 2. Through CLI
-- Please call the `merge.py` scrip from the console
-- ``` > python merge.py -i "[interval 1] [interval 2] ... [interval N]"
+- Please call the `merge.py` script from the console
+- ``` > python merge.py -i "[interval 1] [interval 2] ... [interval N]"```
 - **Note**: please use whitespaces as separator for the intervals in square brackets
