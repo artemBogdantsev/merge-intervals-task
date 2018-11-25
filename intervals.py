@@ -8,6 +8,9 @@ class Intervals:
         self.result = []
         self.start_border = ''
 
+    def print_intervals(self):
+        print(self.intervals)
+
     def merge(self):
         '''
         Implementation of the merge function based on the scanning line algorithm
