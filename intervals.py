@@ -1,3 +1,4 @@
+# O(n) complexity
 class Intervals:
     def __init__(self, intervals):
         self.intervals = intervals
